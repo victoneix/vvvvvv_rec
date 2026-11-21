@@ -1,14 +1,14 @@
 hspd = 0;
 vspd = 0;
-grav = 3;
+grav = 4;
 state = "idle";
 
 grav_dir = 1;
 move_dir = 0;
 move_spd = 0;
-move_spd_max = 2;
-acc = .2;
-dcc = .2;
+move_spd_max = 3;
+acc = .28;
+dcc = .28;
 
 coyote_time_max = 10;
 coyote_time = 0;
