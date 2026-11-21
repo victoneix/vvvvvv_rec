@@ -29,3 +29,16 @@ switch (state) {
         hspd = lengthdir_x(move_spd,move_dir);    
     break;
 }
+
+
+if(x < -8){
+    x = room_width + 8;
+} else if(x > room_width + 8){
+	x = -8;
+}
+
+if(y < -16){
+    y = room_height + 16;
+} else if(y > room_height + 16){
+	y = -16;
+}
