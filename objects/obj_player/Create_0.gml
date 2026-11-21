@@ -6,7 +6,7 @@ state = "idle";
 grav_dir = 1;
 move_dir = 0;
 move_spd = 0;
-move_spd_max = 3;
+move_spd_max = 2;
 acc = .28;
 dcc = .28;
 

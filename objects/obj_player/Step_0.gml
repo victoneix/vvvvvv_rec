@@ -15,6 +15,7 @@ switch (state) {
         }
         
         if(coyote_time > 0 && _up){
+            audio_play_sound(choose(snd_jump,snd_jump2),0,0);
             grav_dir *= -1;
         }
         
