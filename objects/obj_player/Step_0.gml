@@ -1,8 +1,9 @@
-var _right  = keyboard_check(ord("D"));
-var _left   = keyboard_check(ord("A"));
-var _up     = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
+var _right  = keyboard_check(ord("D")) || keyboard_check(vk_right);
+var _left   = keyboard_check(ord("A")) || keyboard_check(vk_left);
+var _up     = keyboard_check_pressed(vk_down) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("S")) || keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
 var _move   = (_right - _left) != 0;
 var _ground = place_meeting(x,y+1,obj_collision) || place_meeting(x,y-1,obj_collision);
+if(keyboard_check_pressed(vk_escape)) game_end();
 
 switch (state) {
 	case "idle":

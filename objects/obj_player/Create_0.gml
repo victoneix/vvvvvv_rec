@@ -1,6 +1,6 @@
 hspd = 0;
 vspd = 0;
-grav = 4;
+grav = 3;
 state = "idle";
 
 grav_dir = 1;
