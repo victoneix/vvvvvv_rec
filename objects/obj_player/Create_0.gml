@@ -10,6 +10,9 @@ move_spd_max = 2;
 acc = .2;
 dcc = .2;
 
+coyote_time_max = 10;
+coyote_time = 0;
+
 approach = function(val1 = 0, val2 = 0, amount = 0){
 	if(val1 < val2){
 		val1 += amount

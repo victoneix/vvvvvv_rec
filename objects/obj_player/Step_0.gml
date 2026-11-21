@@ -2,9 +2,16 @@ var _right  = keyboard_check(ord("D"));
 var _left   = keyboard_check(ord("A"));
 var _up     = keyboard_check_pressed(ord("W"));
 var _move   = (_right - _left) != 0;
+var _ground = place_meeting(x,y+1,obj_collision) || place_meeting(x,y-1,obj_collision);
 
 vspd = grav_dir * grav;
-if(_up){
+if(_ground){
+    coyote_time = coyote_time_max;
+} else {
+	coyote_time--;
+}
+
+if(coyote_time > 0 && _up){
     grav_dir *= -1;
 }
 
