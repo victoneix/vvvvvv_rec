@@ -55,8 +55,13 @@ switch (state) {
         if(rez_time >= 59) audio_play_sound(snd_hurt,0,0);
         if(rez_time <= 0){
             state = "idle";
-            x = xstart;
-            y = ystart;
+            if(global.ckpt_x != 0){
+               x = global.ckpt_x; 
+               y = global.ckpt_y-11; 
+            } else {
+            	x = xstart;
+                y = ystart;
+            }
             hspd = 0;
             vspd = 0;
             move_spd = 0;
