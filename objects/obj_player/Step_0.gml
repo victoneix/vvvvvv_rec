@@ -7,18 +7,15 @@ var _ground = place_meeting(x,y+grav_dir,obj_collision);
 if(keyboard_check_pressed(vk_escape)) game_end();
 if(hspd != 0) image_xscale = sign(hspd);
 
-if(place_meeting(x,y,obj_spiky)) state = "daed";
+if(place_meeting(x,y,obj_spiky) && _ground){
+     state = "daed";
+}
+    
 switch (state) {
 	case "idle":
         vspd += grav_dir * grav;
         vspd = clamp(vspd, -6,6);
-        if(_ground){
-            coyote_time = coyote_time_max;
-        } else {
-        	coyote_time--;
-        }
-        
-        if(coyote_time > 0 && (_up || _down)){
+        if(_ground && (_up || _down)){
             if(grav_dir == 1){
                 audio_play_sound(snd_jump,0,0);
             } else if(grav_dir == -1){
@@ -66,6 +63,7 @@ switch (state) {
             vspd = 0;
             move_spd = 0;
             rez_time = rez_time_max;
+            grav_dir = 1;
         }
     break;
 }

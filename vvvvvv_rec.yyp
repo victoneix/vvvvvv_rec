@@ -47,6 +47,7 @@
     {"id":{"name":"snd_hurt","path":"sounds/snd_hurt/snd_hurt.yy",},},
     {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},},
     {"id":{"name":"snd_jump2","path":"sounds/snd_jump2/snd_jump2.yy",},},
+    {"id":{"name":"snd_ost","path":"sounds/snd_ost/snd_ost.yy",},},
     {"id":{"name":"snd_save","path":"sounds/snd_save/snd_save.yy",},},
     {"id":{"name":"spr_chekpoint","path":"sprites/spr_chekpoint/spr_chekpoint.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},

@@ -1,3 +1,4 @@
+audio_play_sound(snd_ost,0,1);
 hspd = 0;
 vspd = 0;
 grav = 1;
@@ -9,9 +10,6 @@ move_spd = 0;
 move_spd_max = 4;
 acc = .2;
 dcc = .2;
-
-coyote_time_max = 10;
-coyote_time = 0;
 
 rez_time_max = 60;
 rez_time = rez_time_max;
