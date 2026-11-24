@@ -1,4 +1,4 @@
-audio_play_sound(snd_ost,0,1);
+//audio_play_sound(snd_ost,0,1);
 hspd = 0;
 vspd = 0;
 grav = 1;

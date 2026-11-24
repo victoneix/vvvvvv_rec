@@ -10,9 +10,15 @@ if(hspd != 0) image_xscale = sign(hspd);
 if(place_meeting(x,y,obj_spiky) && _ground){
      state = "daed";
 }
+
     
 switch (state) {
 	case "idle":
+        var _time = get_timer() / 1000000;
+        var _sinwave = (sin(_time * 2) + 1) / 2;
+        var _rgb = merge_color(#46AFA2,#68C3FF,_sinwave);
+        image_blend = _rgb;
+        
         vspd += grav_dir * grav;
         vspd = clamp(vspd, -6,6);
         if(_ground && (_up || _down)){
@@ -48,6 +54,7 @@ switch (state) {
         hspd = 0;
         vspd = 0;
         rez_time--;
+        image_blend = c_white;
         sprite_index = spr_player_daed;
         if(rez_time >= 59) audio_play_sound(snd_hurt,0,0);
         if(rez_time <= 0){
